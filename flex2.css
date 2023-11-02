@@ -1,0 +1,31 @@
+#flex-container{
+    width: 80%;
+    height: 600px;
+    background-image: linear-gradient(lime,cyan);
+    display: flex;
+    /* to modify main-axis direction*/
+    flex-direction: column-reverse;
+    /*to povide alignment for flex-items according main-axis*/
+    justify-content: space-evenly;
+}
+#flex-container fieldset{
+    border-radius: 10px;
+    border-color: brown;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    height: 10%;
+}
+fieldset:first-child{
+    background-color: hotpink;
+}
+fieldset:last-child{
+    background-color: red;
+}
+fieldset:nth-child(2){
+    background-color: blueviolet;
+}
+fieldset:nth-child(3){
+    background-color: violet;
+}
