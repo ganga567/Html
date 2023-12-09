@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, section, nav, article, aside, footer {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>This is a Header (h1)</h1>
+        <p>This is a paragraph inside the header.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <article>
+            <h2>Article Title (h2)</h2>
+            <p>This is a paragraph inside the article.</p>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        </article>
+
+        <aside>
+            <h3>Aside Title (h3)</h3>
+            <p>This is a paragraph inside the aside.</p>
+        </aside>
+    </section>
+
+    <footer>
+        <p>This is a Footer (footer)</p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var date = now.toDateString();
+            var time = now.toLocaleTimeString();
+
+            var dateTimeString = "Current Date: " + date + "<br>Current Time: " + time;
+            document.getElementById("liveDateTime").innerHTML = dateTimeString;
+
+            setTimeout(updateDateTime, 1000); // Update every 1000 milliseconds (1 second)
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            updateDateTime(); // Initial call to display date and time
+        });
+    </script>
+
+    <div id="liveDateTime"></div>
+
+</body>
+</html>
